@@ -1048,20 +1048,21 @@
 .connectPrompt {
   text-align: center;
   padding: 4rem 2rem;
-  background: var(--card-bg-light);
+  background: rgba(255, 255, 255, 0.9);
   border: 1px solid var(--card-border-light);
   transition: all 0.3s ease;
   border-radius: 24px;
   margin: 4rem auto;
-  max-width: 600px;
+  max-width: 800px;
   backdrop-filter: blur(20px);
   box-shadow: 0 8px 32px rgba(144, 202, 249, 0.15);
   animation: fadeIn 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .darkMode .connectPrompt {
-  background: var(--card-bg-dark);
-  border-color: var(--card-border-dark);
+  background: rgba(26, 31, 46, 0.9);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: #FFFFFF;
 }
 
 .connectPrompt h2 {
@@ -1077,20 +1078,112 @@
 
 .darkMode .connectPrompt h2 {
   background: var(--accent-gradient-dark);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.connectPrompt p {
-  color: var(--text-secondary-light);
-  font-size: 1.1rem;
-  line-height: 1.6;
-  max-width: 400px;
+.connectDescription {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 600px;
   margin: 0 auto;
+}
+
+.mainDescription {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--text-secondary-light);
+}
+
+.darkMode .mainDescription {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.featuresList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: left;
+  margin: 1rem 0;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgba(144, 202, 249, 0.1);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.darkMode .feature {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.feature:hover {
+  transform: translateX(5px);
+  background: rgba(144, 202, 249, 0.15);
+}
+
+.darkMode .feature:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.featureIcon {
+  font-size: 1.5rem;
+  min-width: 2rem;
+  text-align: center;
+}
+
+.feature span:last-child {
+  font-size: 1.1rem;
+  color: var(--text-secondary-light);
+}
+
+.darkMode .feature span:last-child {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.connectCta {
+  font-size: 1.1rem;
+  color: var(--text-secondary-light);
+  margin-top: 1rem;
+  padding: 1rem;
+  background: rgba(76, 175, 80, 0.1);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.darkMode .connectCta {
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(129, 199, 132, 0.1);
+}
+
+@media (max-width: 768px) {
+  .connectPrompt {
+    margin: 2rem 1rem;
+    padding: 2rem 1rem;
+  }
+
+  .connectPrompt h2 {
+    font-size: 2rem;
+  }
+
+  .mainDescription {
+    font-size: 1.1rem;
+  }
+
+  .feature span:last-child {
+    font-size: 1rem;
+  }
 }
 
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(-5px);
   }
   to {
     opacity: 1;

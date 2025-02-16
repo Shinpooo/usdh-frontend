@@ -6,9 +6,9 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>USDH Vault</title>
+        <title>Suq</title>
         <meta
-          content="USDH Vault - Decentralized Stablecoin Protocol"
+          content="Suq - Decentralized Interest-Free Stablecoin Protocol"
           name="description"
         />
         <link href="/favicon.ico" rel="icon" />

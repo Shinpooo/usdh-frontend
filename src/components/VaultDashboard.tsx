@@ -563,7 +563,7 @@ const VaultDashboard = () => {
     <div className={`${styles.dashboard} ${isDarkMode ? styles.darkMode : ''}`}>
       <div className={styles.cloudLayer} />
       <div className={styles.header}>
-        <h1>USDH Vault</h1>
+        <h1>Suq</h1>
         <div className={styles.headerControls}>
           <button
             className={styles.themeToggle}
@@ -617,8 +617,26 @@ const VaultDashboard = () => {
           </>
         ) : (
           <div className={`${styles.connectPrompt} ${styles.glassEffect}`}>
-            <h2>Welcome to USDH Vault</h2>
-            <p>Connect your wallet to manage your vault position and mint USDH stablecoin against your ETH collateral.</p>
+            <h2>Welcome to Suq</h2>
+            <div className={styles.connectDescription}>
+              <p className={styles.mainDescription}>
+                Suq lets you mint USDH, an interest-free stablecoin that maintains a 1:1 peg with USD, backed entirely by ETH collateral.
+              </p>
+              <div className={styles.featuresList}>
+                <div className={styles.feature}>
+                  <span className={styles.featureIcon}>🔒</span>
+                  <span>Secure: Fully backed by ETH collateral</span>
+                </div>
+                <div className={styles.feature}>
+                  <span className={styles.featureIcon}>💸</span>
+                  <span>Interest-free: No borrowing fees</span>
+                </div>
+                <div className={styles.feature}>
+                  <span className={styles.featureIcon}>⚡</span>
+                  <span>Efficient: Mint USDH instantly against your ETH</span>
+                </div>
+              </div>
+            </div>
           </div>
         )}
       </div>
