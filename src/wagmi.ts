@@ -1,23 +1,8 @@
 import { getDefaultConfig } from '@rainbow-me/rainbowkit';
-import {
-  arbitrum,
-  base,
-  mainnet,
-  optimism,
-  polygon,
-  sepolia,
-} from 'wagmi/chains';
+import { sepolia } from 'wagmi/chains';
 
 export const config = getDefaultConfig({
-  appName: 'RainbowKit App',
-  projectId: 'YOUR_PROJECT_ID',
-  chains: [
-    mainnet,
-    polygon,
-    optimism,
-    arbitrum,
-    base,
-    ...(process.env.NEXT_PUBLIC_ENABLE_TESTNETS === 'true' ? [sepolia] : []),
-  ],
-  ssr: true,
+    appName: 'USDH Vault',
+    projectId: 'c4a5352f4f7e1e5a3c3fef561a986fd9', // Public demo project ID from RainbowKit
+    chains: [sepolia],
 });
